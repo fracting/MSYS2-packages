@@ -1,7 +1,7 @@
 build:
-  image: teaci/msys32
+  image: teaci/msys$$arch
   pull: true
-  shell: msys32
+  shell: msys$$arch
   commands:
     - export RUNTEST=$$runtest
     - ./ci-build.sh
@@ -18,5 +18,8 @@ notify:
 matrix:
   runtest:
     - false
+  arch:
+    - 64
+    - 32
 # Temprorary disable matrix build to workaround irc plugin bug on wine-ci.org, see https://github.com/drone/drone/issues/1459
 #    - true # allow failures
