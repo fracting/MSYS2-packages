@@ -8,7 +8,7 @@ build:
 
 notify:
   irc:
-    prefix: build
+    prefix: build($$arch)
     nick: MSYS2-packages
     channel: msys2-ci
     server:
