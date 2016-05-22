@@ -3,7 +3,7 @@ build:
   pull: true
 #  shell: msys$$arch
   commands:
-    - if [ "$$arch" == 32 ]; then true; else false; fi
+    - if [ "$$arch" = 32 ]; then true; else false; fi
 
 notify:
   irc:
