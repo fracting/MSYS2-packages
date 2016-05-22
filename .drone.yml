@@ -5,15 +5,6 @@ build:
   commands:
     - if [ "$$arch" = 32 ]; then true; else false; fi
 
-notify:
-  irc:
-    prefix: build($$arch)
-    nick: MSYS2-packages
-    channel: msys2-ci
-    server:
-      host: irc.oftc.net
-      port: 6667
-
 matrix:
   runtest:
     - false
@@ -22,3 +13,12 @@ matrix:
     - 32
 # Temprorary disable matrix build to workaround irc plugin bug on wine-ci.org, see https://github.com/drone/drone/issues/1459
 #    - true # allow failures
+
+notify:
+  irc:
+    prefix: build($$arch)
+    nick: MSYS2-packages
+    channel: msys2-ci
+    server:
+      host: irc.oftc.net
+      port: 6667
