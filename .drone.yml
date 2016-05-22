@@ -10,17 +10,10 @@ matrix:
     - false
   arch:
     - 64
-    - 32
+#    - 32
 # Temprorary disable matrix build to workaround irc plugin bug on wine-ci.org, see https://github.com/drone/drone/issues/1459
 #    - true # allow failures
 
 notify:
-  irc:
-    prefix: build($$arch)
-    nick: MSYS2-packages
-    channel: msys2-ci
-    server:
-      host: irc.oftc.net
-      port: 6667
   gitter:
     webhook: https://webhooks.gitter.im/e/d8f2032e40a8e78a3882
