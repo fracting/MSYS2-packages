@@ -1,5 +1,5 @@
 build:
-  image: teaci/msys$$arch:testing
+  image: fracting/msys$$arch:testing
   pull: true
   shell: msys$$arch
   commands:
