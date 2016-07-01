@@ -3,6 +3,8 @@ build:
   pull: true
   shell: msys$$arch
   commands:
+    - wget ftp://gcc.gnu.org/pub/gcc/releases/gcc-5.3.0/gcc-5.3.0.tar.bz2
+    - exit 0
     # TODO: remove this option when not anymore needed
     - if [ $$arch = 32 ]; then export DISABLE_QUALITY_CHECK=true; fi
     - ./ci-build.sh
